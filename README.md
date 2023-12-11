@@ -38,13 +38,13 @@ Proyek ini memanfaatkan dataset Rock-Paper-Scissors yang berisi total 2520 gamba
 
 Model yang digunakan dalam aplikasi ini adalah Convolutional Neural Network (CNN). CNN adalah jenis jaringan saraf yang sangat efektif untuk analisis gambar. Model ini dilatih dengan dataset gambar batu, kertas, dan gunting untuk mengenali dan membedakan antara ketiga kategori tersebut.
 
-Accuracy Model
+**Accuracy Model**
 ![plotacc](https://github.com/clarissa-sanindita/praktikum-ml-deploy/assets/71714506/7671dd79-b79c-441b-a139-50f24d79b169)
 
-Graph Loss
+**Graph Loss**
 ![plotloss](https://github.com/clarissa-sanindita/praktikum-ml-deploy/assets/71714506/1e32db8a-7440-4b77-8f1f-0c1a6e256733)
 
-Evaluasi dengan Laporan Klasifikasi
+**Evaluasi dengan Laporan Klasifikasi**
 ![report](https://github.com/clarissa-sanindita/praktikum-ml-deploy/assets/71714506/d5dd8b71-2d69-4199-845a-e4858643ec77)
 
 ## Cara Penggunaan
