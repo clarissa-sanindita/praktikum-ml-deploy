@@ -38,9 +38,14 @@ Proyek ini memanfaatkan dataset Rock-Paper-Scissors yang berisi total 2520 gamba
 
 Model yang digunakan dalam aplikasi ini adalah Convolutional Neural Network (CNN). CNN adalah jenis jaringan saraf yang sangat efektif untuk analisis gambar. Model ini dilatih dengan dataset gambar batu, kertas, dan gunting untuk mengenali dan membedakan antara ketiga kategori tersebut.
 
-Graph Loss dan Accuracy Model
+Accuracy Model
+![Plot Acc](https://user-images.githubusercontent.com/images/plotacc.png)
+
+Graph Loss
+![Plot Loss](https://user-images.githubusercontent.com/images/plotloss.png)
 
 Evaluasi dengan Laporan Klasifikasi
+![Report](https://user-images.githubusercontent.com/images/report.png)
 
 ## Cara Penggunaan
 
