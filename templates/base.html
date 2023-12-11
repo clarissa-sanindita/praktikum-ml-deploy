@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="SemiColonWeb" />
+
+    <!-- Stylesheets
+	============================================= -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='new_asset/css/bootstrap.css') }}"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='new_asset/style.css') }}"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='new_asset/css/dark.css') }}"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='new_asset/css/font-icons.css') }}"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='new_asset/css/animate.css') }}"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='new_asset/css/magnific-popup.css') }}"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='new_asset/css/custom.css') }}"
+      type="text/css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rock Paper Scissor</title>
+    <style>
+      #imag {
+        padding-left: 10px;
+        padding-top: 10px;
+        float: justify;
+        width: 30%;
+      }
+
+      #input {
+        font-family: Poppins-Medium;
+        font-size: 15px;
+        line-height: 1.5;
+        color: #666666;
+        visibility: visible;
+        display: block;
+        width: 100%;
+        background: #e6e6e6;
+        height: 50px;
+        border-radius: 25px;
+        padding: 0 30px 0 68px;
+      }
+
+      input#file {
+        display: inline-block;
+        width: 100%;
+        padding: 350px 0 0 0;
+        height: 350px;
+        overflow: hidden;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background: url("https://cdn1.iconfinder.com/data/icons/hawcons/32/698394-icon-130-cloud-upload-512.png")
+          center center no-repeat #e4e4e4;
+        border-radius: 20px;
+        background-size: 100px 100px;
+      }
+    </style>
+
+    <!-- Stylesheets Form Start-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='form/vendor/bootstrap/css/bootstrap.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='form/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='form/fonts/iconic/css/material-design-iconic-font.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='form/vendor/animate/animate.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='form/vendor/css-hamburgers/hamburgers.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='form/vendor/animsition/css/animsition.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='form/vendor/select2/select2.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='form/vendor/daterangepicker/daterangepicker.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='form/css/util.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='form/css/main.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='main/css/test.css') }}"
+    />
+    <!-- Stylesheets Form End-->
+    <style>
+      @media screen and (max-width: 1024px) {
+        .hideAndSeekElementMax {
+          display: none;
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+        .header-top {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="stretched">
+    <!-- Document Wrapper ============================================= -->
+    <div id="wrapper" class="clearfix">
+      <!-- Template Start ============================================= -->
+      {% block content %}{% endblock %}
+      <!-- Template End ============================================= -->
+    </div>
+
+    <!-- Go To Top ============================================= -->
+    <div id="gotoTop" class="icon-angle-up"></div>
+    <!-- jequery search file start -->
+    <script src="{{ url_for('static', filename='vendor/js/upload.js') }}"></script>
+    <!-- jequery search file end -->
+    <script>
+      var checker = document.getElementById("checkme");
+      var sendbtn = document.getElementById("send");
+      checker.onchange = function () {
+        sendbtn.disabled = !this.checked;
+      };
+
+      function change(value) {
+        document.getElementById("count").value = value;
+      }
+
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+            $("#preview").attr("src", e.target.result);
+          };
+
+          reader.readAsDataURL(input.files[0]); // convert to base64 string
+        }
+      }
+    </script>
+
+    <!-- main-js -->
+    <script src="{{ url_for('static', filename='main/js/script.js') }}"></script>
+
+    <!-- test js -->
+    <script src="{{ url_for('static', filename='main/js/test.js') }}"></script>
+
+    <!--===============================================================================================-->
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+    <!--===============================================================================================-->
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/popper.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+    <!--===============================================================================================-->
+    <script src="{{ url_for('static', filename='vendor/select2/select2.min.js') }}"></script>
+    <!--===============================================================================================-->
+    <script src="{{ url_for('static', filename='vendor/tilt/tilt.jquery.min.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='vendor/js/files.js') }}"></script>
+    <!--===============================================================================================-->
+  </body>
+</html>

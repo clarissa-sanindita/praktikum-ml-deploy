@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict RPS</title>
+
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&display=swap" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='new_asset/css/bootstrap.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='new_asset/style.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='new_asset/css/dark.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='new_asset/css/font-icons.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='new_asset/css/animate.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='new_asset/css/magnific-popup.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='new_asset/css/custom.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='form/vendor/bootstrap/css/bootstrap.min.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='form/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='form/fonts/iconic/css/material-design-iconic-font.min.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='form/vendor/animate/animate.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='form/vendor/css-hamburgers/hamburgers.min.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='form/vendor/animsition/css/animsition.min.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='form/vendor/select2/select2.min.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='form/vendor/daterangepicker/daterangepicker.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='form/css/util.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='form/css/main.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='main/css/test.css') }}" type="text/css" />
+</head>
+<body>
+    <!-- Table-section -->
+    <section class="contact-section" id="result" style="padding-bottom: 50px; margin-top: 130px;">
+        <div class="title-box" style="text-align: center;">
+            <div class="sec-title">
+                <h2>Prediction Result</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12 col-sm-12 content-column">
+                    <div class="inner-content">
+                        <div class="contact-form-area" style="margin-top: 50px;">
+                            <p style="margin: unset; padding: none; color: black; text-transform: capitalize; font-size: 25px; font-weight: bold;">
+                                {{ model }} Model</p>
+                            <p style="margin: unset; padding: none; color: black; text-transform: capitalize; font-size: medium; font-weight: bold;">
+                                Predicted Label is: {{ labels[pred] }}</p>
+                            Accuracy : {{ (probs|max) }}% | Prediction Time : {{ (run_time) }} second
+                            <input type="hidden" id="probability" value={{(probs|max)}}>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12 sidebar-column">
+                    <div class="sidebar-content">
+                        <img src="{{ url_for('static', filename='uploads/temp.jpg') }}" alt="" class="img-fluid" style="height:300px; width:300px;">
+                        <p style="font-size:25px;text-align:center;">Input Image</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- final-section end -->
+
+    <!-- Main JS -->
+    <script src="{{ url_for('static', filename='main/js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='main/js/test.js') }}"></script>
+
+    <!-- Vendor JS -->
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/popper.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/select2/select2.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/tilt/tilt.jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/js/files.js') }}"></script>
+</body>
+</html>
