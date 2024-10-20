@@ -1,5 +1,7 @@
 # Klasifikasi Batu Gunting Kertas (Rock-Paper-Scissors) dengan Model CNN
 
+![Tampilan Web](images/deploy1.png)
+
 Klasifikasi RPS (Rock-Paper-Scissors) adalah aplikasi web yang memungkinkan pengguna untuk mengunggah gambar dan menggunakan model pembelajaran mesin CNN untuk memprediksi apakah gambar tersebut merupakan batu, kertas, atau gunting.
 
 ## Instalasi
@@ -49,6 +51,11 @@ Model yang digunakan dalam aplikasi ini adalah Convolutional Neural Network (CNN
 **Evaluasi dengan Laporan Klasifikasi**
 
 ![report](https://github.com/clarissa-sanindita/praktikum-ml-deploy/assets/71714506/d5dd8b71-2d69-4199-845a-e4858643ec77)
+
+**Hasil Model CNN pada Tampilan Website**
+![Hasil](images/deploy2.png)
+
+![Hasil](images/deploy3.png)
 
 ## Cara Penggunaan
 
